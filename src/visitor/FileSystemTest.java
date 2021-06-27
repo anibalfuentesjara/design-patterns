@@ -36,7 +36,7 @@ public class FileSystemTest {
 	@Test
 	public void testNumberOfFilesAndDirectories() {
 		assertEquals(2, fs.getNumberOfFiles());
-		assertEquals(2, fs.getNumberOfDirectories());
+		assertEquals(3, fs.getNumberOfDirectories());
 	}
 
 }

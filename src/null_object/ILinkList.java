@@ -1,4 +1,4 @@
-package null_pattern;
+package null_object;
 
 public interface ILinkList {
 	

@@ -1,4 +1,4 @@
-package null_pattern;
+package null_object;
 
 public class LinkList implements ILinkList {
 	private Cell first;
