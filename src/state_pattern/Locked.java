@@ -4,15 +4,14 @@ public class Locked extends State {
 
 	private String code;
 
-	public Locked(Safe safe, String code) {
-		super(safe);
+	public Locked(String code) {
 		this.code = code;
 	}
 
 	@Override
 	public void enterCode(String code) {
 		if (this.code.equals(code)) {
-			this.safe.setState(new Closed(this.safe));
+			this.changeState(new Closed());
 		} else {
 			System.out.println("Invalid code");
 		}

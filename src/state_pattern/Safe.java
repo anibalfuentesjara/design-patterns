@@ -1,15 +1,16 @@
 package state_pattern;
 
 public class Safe {
-
 	private State state;
 
 	public Safe() {
-		this.state = new Open(this);
+		this.state = new Open();
+		this.state.setSafe(this);
 	}
 
-	protected void setState(State aState) {
+	void setState(State aState) {
 		state = aState;
+		state.setSafe(this);
 	}
 
 	public void open() {

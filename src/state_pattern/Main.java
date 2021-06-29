@@ -11,16 +11,16 @@ public class Main {
 		System.out.println("close safe, is closed?");
 		System.out.println(safe.isClosed());
 		
-		safe.lock("abc123");
 		System.out.println("lock safe, is locked?");
+		safe.lock("abc123");
 		System.out.println(safe.isLocked());
 		
+		System.out.println("unlock safe, is locked?");
 		safe.enterCode("jajaja");
-		System.out.println("unlock safe, is locked?");
 		System.out.println(safe.isLocked());
 		
-		safe.enterCode("abc123");
 		System.out.println("unlock safe, is locked?");
+		safe.enterCode("abc123");
 		System.out.println(safe.isLocked());
 		
 		safe.open();

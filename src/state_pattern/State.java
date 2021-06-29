@@ -2,30 +2,34 @@ package state_pattern;
 
 public abstract class State {
 
-	protected Safe safe;
-	
-	public State(Safe safe) {
+	private Safe safe;
+
+	protected void setSafe(Safe safe) {
 		this.safe = safe;
 	}
-	
+
+	protected void changeState(State state) {
+		safe.setState(state);
+	}
+
 	void error() {
 		throw new RuntimeException();
 	}
 
 	public void open() {
-		this.error();
+		error();
 	}
 
 	public void close() {
-		this.error();
+		error();
 	}
 
 	public void lock(String code) {
-		this.error();
+		error();
 	}
 
 	public void enterCode(String code) {
-		this.error();
+		error();
 	}
 
 	public boolean isOpen() {
